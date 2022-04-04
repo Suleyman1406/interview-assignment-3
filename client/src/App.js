@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Home from "./components/Home";
+import Loading from "./components/Loading";
 
 /**
  * Convert the contract date to a date format
@@ -67,11 +68,16 @@ function App() {
         }
       });
       setMap(map);
-      console.log(map);
     }
   }, [data]);
 
-  return <Home historyMap={historyMap} />;
+  return (
+    <div className="min-w-[100vh] h-[100vh] bg-home bg-cover pt-[10rem] ">
+      <div className="w-[80%]  mx-auto bg-white/50 shadow-lg shadow-[#fff] rounded   p-6 ">
+        {historyMap ? <Home historyMap={historyMap} /> : <Loading />}
+      </div>
+    </div>
+  );
 }
 
 export default App;
