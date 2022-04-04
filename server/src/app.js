@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const fs = require("fs");
 const axios = require("axios").default;
 
 /* Getting the current date and time and formatting it to the desired format. */
@@ -25,5 +24,5 @@ app.get("/intra-day-trade-history", async function (req, res) {
 });
 
 app.listen("8080", () => {
-  console.log(`Example app listening on port 8080`);
+  console.log(`App listening on port 8080`);
 });
