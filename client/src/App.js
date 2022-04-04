@@ -16,7 +16,7 @@ const convertToDate = (conract) => {
     Number(conract.substring(8, 10))
   );
   var dd = String(date.getDate()).padStart(2, "0");
-  var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var mm = String(date.getMonth()).padStart(2, "0"); //January is 0!
   var yyyy = date.getFullYear();
   var hh = String(date.getHours()).padStart(2, "0");
   var min = String(date.getMinutes()).padStart(2, "0");

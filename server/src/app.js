@@ -10,9 +10,7 @@ var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 var yyyy = today.getFullYear();
 
 today = yyyy + "-" + mm + "-" + dd;
-//const url = `https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate=${today}&startDate=${today}`;
-
-const url = `https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate=2022-02-07&startDate=2022-02-07`;
+const url = `https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate=${today}&startDate=${today}`;
 
 /* This is a middleware function that allows the server to respond to requests from other servers. */
 
